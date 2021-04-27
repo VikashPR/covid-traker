@@ -2,6 +2,8 @@
   <v-container v-if='!loading'>
     <DataTitle :text="title" :dataDate="dataData"/>
     <data-box :stats='stats'></data-box>
+
+    <country-select></country-select>
   </v-container>
   <main class="d-flex flex-column align-center justify-center" v-else>
     <div class="mt-10 mb-6  grey--text">
@@ -12,12 +14,14 @@
 </template>
 
 <script>
+import CountrySelect from '../components/CountrySelect.vue';
 import DataBox from '../components/DataBox.vue';
 import DataTitle from '../components/DataTitle.vue';
 
+
 export default {
   name: 'Home',
-  components: {DataTitle, DataBox},
+  components: {DataTitle, DataBox, CountrySelect},
   data(){
     return{
       loading: true,
