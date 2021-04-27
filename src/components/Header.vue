@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card height="120px" dark prominent class="d-flex flex-wrap justify-center align-center px-4" color="red">
+    <v-card height="120px" dark prominent class="d-flex flex-wrap justify-center align-center px-6" color="red">
       <v-btn class="ma-2" large color="black" >
         <h1>Covid-19 Tracker</h1> 
         <v-icon dark center>
