@@ -17,13 +17,9 @@
     },
     methods: {
       onChange() {
-        let cArr = this.countries;
-        let itemID = this.selected.ID;
-        const country = cArr.find((item) => item.ID === itemID)
-        // console.log(country);
-        this.$emit ('get-country',country);
-
-      }
+        const country = this.countries.find((item) => item.ID === this.selected.ID)
+        this.$emit('get-country', country)
+    },
     }
   }
 </script>
