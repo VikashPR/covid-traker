@@ -3,7 +3,7 @@
     <DataTitle :text="title" :dataDate="dataData"/>
     <data-box :stats='stats'></data-box>
 
-    <country-select></country-select>
+    <country-select v-on:get-country='getCountryData()' :countries="countries"></country-select>
   </v-container>
   <main class="d-flex flex-column align-center justify-center" v-else>
     <div class="mt-10 mb-6  grey--text">
@@ -38,7 +38,12 @@ export default {
       const data = await res.json();
       return data;
       // console.log(data.Countries);
-    }
+    },
+    getCountryData(country) {
+      // console.log(country.Country);
+      this.title = country.CountryCode
+
+    },
   },
   async created(){
     const data = await this.fetchCovidData();
